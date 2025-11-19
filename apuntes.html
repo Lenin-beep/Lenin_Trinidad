@@ -27,7 +27,7 @@
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td>${d.titulo}</td>
-          <td><a href="${d.archivo}" download>${d.contenido}</a></td>
+          <td><a href="${d.archivo}" target="_blank" rel="noopener">${d.contenido}</a></td>
           <td>${d.fecha}</td>
         `;
         tbody.appendChild(tr);
