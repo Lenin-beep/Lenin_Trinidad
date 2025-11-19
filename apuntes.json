@@ -4,11 +4,13 @@
     "contenido": "Límites y filtros", 
     "fecha": "18-11-2025", 
     "area": "Análisis",
-    "nivel": "Colegio"},
+    "nivel": "Colegio",
+    "estado": "90%"},
   { "archivo": "apuntes/Preliminar.pdf", 
     "titulo": "Preliminar de Tesis", 
     "contenido": "Inestabilidad Estructural", 
     "fecha": "18-11-2025", 
     "area": "Ecuaciones Diferenciales",
-    "nivel": "Pregrado"} 
+    "nivel": "Pregrado"
+    "estado": "80%"} 
 ]
