@@ -54,9 +54,9 @@ nav a {
 }
 
 .sobre-mi .imagen {
-    max-width: 300px; /* ancho máximo */
-  height: auto;      /* mantiene proporción */
-  border-radius: 10px; /* opcional, para que se vea más cool */
+    max-width: 150px; /* tamaño reducido */
+    height: auto;
+    border-radius: 10px;
 }
 
 
