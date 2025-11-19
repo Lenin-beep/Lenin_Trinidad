@@ -8,46 +8,46 @@
 <body>
   <h1>Lenin Trinidad</h1>
 
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="sobre.html">Sobre Mí</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="blog.html">Blog</a>
-    <a href="apuntes.html">Apuntes</a>
-  </nav>
+  <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre.html">Sobre Mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="blog.html">Blog</a>
+      <a href="apuntes.html">Apuntes</a>
+    </nav>
+    
+  <table id="tabla">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Contenido</th>
+        <th>Área</th>
+        <th>Nivel</th>
+        <th>Estado</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
   
-<table id="tabla">
-  <thead>
-    <tr>
-      <th>Título</th>
-      <th>Contenido</th>
-      <th>Área</th>
-      <th>Nivel</th>
-      <th>Estado</th>
-      <th>Fecha</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<script>
-  fetch("apuntes.json")
-    .then(r => r.json())
-    .then(lista => {
-      const tbody = document.querySelector("#tabla tbody");
-      lista.forEach(d => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td>${d.titulo}</td>
-          <td><a href="${d.archivo}" target="_blank" rel="noopener">${d.contenido}</a></td>
-          <td>${d.area}</td>
-          <td>${d.nivel}</td>
-          <td>${d.estado}</td>
-          <td>${d.fecha}</td>
-        `;
-        tbody.appendChild(tr);
+  <script>
+    fetch("apuntes.json")
+      .then(r => r.json())
+      .then(lista => {
+        const tbody = document.querySelector("#tabla tbody");
+        lista.forEach(d => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${d.titulo}</td>
+            <td><a href="${d.archivo}" target="_blank" rel="noopener">${d.contenido}</a></td>
+            <td>${d.area}</td>
+            <td>${d.nivel}</td>
+            <td>${d.estado}</td>
+            <td>${d.fecha}</td>
+          `;
+          tbody.appendChild(tr);
+        });
       });
-    });
   </script>
 </body>
 </html>
